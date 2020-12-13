@@ -1,3 +1,14 @@
-body {
-  color: green;
+.components-wrapper {
+  width: 80%;
+  max-width: 600px;
+  margin: 100px auto 30px auto;
+  // border: 1px solid red;
+  padding: 20px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  border-radius: 4px;
+  // background-color: rgb(255, 211, 65);
+}
+
+input {
+  width: 100%;
 }
