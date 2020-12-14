@@ -1,5 +1,8 @@
 import React from "react";
 import GeneralInformationEditMode from "./GeneralInformationEditMode";
+import GeneralInformationDisplayMode from "./GeneralInformationDisplayMode";
+import EditButton from "./EditButton";
+import SubmitButton from "./SubmitButton";
 
 class GeneralInformation extends React.Component {
   constructor(props) {
@@ -9,8 +12,8 @@ class GeneralInformation extends React.Component {
     // this.handleChangeInputName = this.handleChangeInputName.bind(this);
 
     // new
-    // this.handleEditModeClick = this.handleEditModeClick.bind(this);
-    // this.handleDisplayModeClick = this.handleDisplayModeClick.bind(this);
+    this.handleEditModeClick = this.handleEditModeClick.bind(this);
+    this.handleDisplayModeClick = this.handleDisplayModeClick.bind(this);
 
     this.handleChangeInput = this.handleChangeInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -65,13 +68,13 @@ class GeneralInformation extends React.Component {
           
           
   // new
-  // handleEditModeClick() {
-  //   this.setState({isInEditMode: false});
-  // }
+  handleEditModeClick() {
+    this.setState({isInEditMode: false});
+  }
 
-  // handleDisplayModeClick() {
-  //   this.setState({isInEditMode: true});
-  // }
+  handleDisplayModeClick() {
+    this.setState({isInEditMode: true});
+  }
 
   handleChangeInput = (index, e) => {
     // console.log(index, event.target.name);
@@ -86,7 +89,8 @@ class GeneralInformation extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log("inputFields", this.state.inputFields);
+    this.handleEditModeClick();
+    // console.log("inputFields", this.state.inputFields);
     // console.log("hi");
   };
 
@@ -126,6 +130,35 @@ class GeneralInformation extends React.Component {
     //   />
     //   button = <EditButton onClick={this.handleDisplayModeClick} />
     // }
+    const isInEditMode = this.state.isInEditMode;
+    let renderingMode;
+    let button;
+    if (isInEditMode) {
+      renderingMode = <GeneralInformationEditMode 
+      // onSubmitFormHandleSubmit={this.handleSubmit.bind(this)}
+      // onSubmitFormHandleSubmit={this.handleSubmit}
+
+      inputFields={this.state.inputFields}
+      onChangeInput={this.handleChangeInput}
+      onClickHandleRemoveFields={this.handleRemoveFields}
+      onClickHandleAddFields={this.handleAddFields}
+
+      // onClickHandleSubmit={this.handleSubmit.bind(this)}
+      // onClickHandleSubmit={this.handleSubmit}
+
+    />
+      button = <SubmitButton onClick={this.handleEditModeClick} />
+    } else {
+      renderingMode = <GeneralInformationDisplayMode 
+        // inputName={this.state.inputName}
+        // inputEmail={this.state.inputEmail}
+        // inputPhone={this.state.inputPhone}
+        inputFields={this.state.inputFields}
+        // onClickHandleEdit={this.handleDisplayModeClick}
+      />
+      button = <EditButton onClick={this.handleDisplayModeClick} />
+    }
+
 
     return (
       // <div className="component-item">
@@ -161,7 +194,7 @@ class GeneralInformation extends React.Component {
           onClickHandleSubmit={this.handleSubmit.bind(this)}
         /> */}
 
-        <GeneralInformationEditMode 
+        {/* <GeneralInformationEditMode 
           // onSubmitFormHandleSubmit={this.handleSubmit.bind(this)}
           onSubmitFormHandleSubmit={this.handleSubmit}
 
@@ -173,7 +206,11 @@ class GeneralInformation extends React.Component {
           // onClickHandleSubmit={this.handleSubmit.bind(this)}
           onClickHandleSubmit={this.handleSubmit}
 
-        />
+        /> */}
+        <div className="component-item">
+        {renderingMode}
+        {button}
+      </div>
       </div>
     )
   }

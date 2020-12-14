@@ -60,7 +60,8 @@ const GeneralInformationEditMode = (props) => {
 
           {/* <button type="submit" onClick={props.onClickHandleSubmit}>submit</button> */}
           {/* <button type="submit" onClick={props.onClickHandleSubmit.bind(this)}>submit</button> */}
-          <button type="submit" onClick={e => props.onClickHandleSubmit(e)}>submit</button>
+
+          {/* <button type="submit" onClick={e => props.onClickHandleSubmit(e)}>submit</button> */}
         </form>
     </div>
   );
