@@ -149,9 +149,6 @@ class GeneralInformation extends React.Component {
       button = <SubmitButton onClick={this.handleEditModeClick} />
     } else {
       renderingMode = <GeneralInformationDisplayMode 
-        // inputName={this.state.inputName}
-        // inputEmail={this.state.inputEmail}
-        // inputPhone={this.state.inputPhone}
         inputFields={this.state.inputFields}
         onClickHandleEdit={this.handleDisplayModeClick}
       />

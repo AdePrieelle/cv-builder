@@ -3,7 +3,7 @@ import React from "react";
 const GeneralInformationDisplayMode = (props) => {
   return (
     <div className="component">
-        <div className="component-header">General information</div>
+        <div className="component-header-display-mode">General information</div>
         <div className="component-props">
           {props.inputFields.map((inputField, index) => (
                 <div key={index}>

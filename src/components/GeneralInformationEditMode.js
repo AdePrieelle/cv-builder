@@ -42,7 +42,7 @@ const GeneralInformationEditMode = (props) => {
         {/* <form onSubmit={props.onSubmitFormHandleSubmit.bind(this)}> */}
         <form onSubmit={e => props.onSubmitFormHandleSubmit(e)}>
 
-          <div className="general-information-header">General Information</div>
+          <div className="component-header-edit-mode">General Information</div>
           {props.inputFields.map((inputField, index) => (
               <div key={index}>
                 <label htmlFor={"name"+index}>Name</label>

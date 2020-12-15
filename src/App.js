@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Header from "./components/Header"
 import GeneralInformation from "./components/GeneralInformation";
-// import EducationalExperience from "./components/EducationalExperience";
-// import PracticalExperience from "./components/PracticalExperience";
+import EducationalExperience from "./components/EducationalExperience";
+import WorkExperience from "./components/WorkExperience";
 import './styles/App.scss';
 
 class App extends Component {
@@ -16,8 +16,8 @@ class App extends Component {
         <Header />
         <div className="components-wrapper">
           <GeneralInformation />
-          {/* <EducationalExperience /> */}
-          {/* <PracticalExperience /> */}
+          <EducationalExperience />
+          <WorkExperience />
         </div>
       </div>
     )
