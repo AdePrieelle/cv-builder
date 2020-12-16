@@ -19,17 +19,11 @@ class WorkExperience extends React.Component {
       isInEditMode: true,
       inputFields: [
         {
-          inputCompanyName: "Company 1",
-          inputJobTitle: "job 1",
-          inputJobTasks: "tasks 1",
-          inputJobDate: "date 1",
+          inputCompanyName: "",
+          inputJobTitle: "",
+          inputJobTasks: "",
+          inputJobDate: "",
         },
-        {
-          inputCompanyName: "Company 2",
-          inputJobTitle: "job 2",
-          inputJobTasks: "tasks 3",
-          inputJobDate: "date 4",
-        }
       ],
     };
   }       
@@ -49,8 +43,8 @@ class WorkExperience extends React.Component {
     this.setState({
       values
     });
-    console.log(index, e.target.name);
-    console.log(this.state.inputFields);
+    // console.log(index, e.target.name);
+    // console.log(this.state.inputFields);
   };
 
   handleSubmit = (e) => {

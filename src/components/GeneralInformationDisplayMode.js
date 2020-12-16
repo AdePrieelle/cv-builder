@@ -13,6 +13,8 @@ const GeneralInformationDisplayMode = (props) => {
                   <div className="props-value">{inputField.inputEmail}</div>
                   <div className="form-label">Phone number</div>
                   <div className="props-value">{inputField.inputPhone}</div>
+                  <div className="form-label">LinkedIn</div>
+                  <div className="props-value">{inputField.inputLinkedIn}</div>
                 </div>
             ))}
         </div>

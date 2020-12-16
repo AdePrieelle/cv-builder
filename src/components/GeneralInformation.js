@@ -26,15 +26,11 @@ class GeneralInformation extends React.Component {
       isInEditMode: true,
       inputFields: [
         {
-          inputName: "inputname",
+          inputName: "",
           inputEmail: "",
           inputPhone: "",
+          inputLinkedIn: "",
         },
-        {
-          inputName: "inputname2",
-          inputEmail: "",
-          inputPhone: "",
-        }
       ],
     };
   }
@@ -83,8 +79,8 @@ class GeneralInformation extends React.Component {
     this.setState({
       values
     });
-    console.log(index, e.target.name);
-    console.log(this.state.inputFields);
+    // console.log(index, e.target.name);
+    // console.log(this.state.inputFields);
   };
 
   handleSubmit = (e) => {
@@ -95,7 +91,7 @@ class GeneralInformation extends React.Component {
 
   handleAddFields = () => {
     this.setState({
-      inputFields: this.state.inputFields.concat({inputName: "", inputEmail: "", inputPhone: ""})
+      inputFields: this.state.inputFields.concat({inputName: "", inputEmail: "", inputPhone: "", inputLinkedIn: ""})
     });
   };
 
@@ -139,18 +135,18 @@ class GeneralInformation extends React.Component {
 
       inputFields={this.state.inputFields}
       onChangeInput={this.handleChangeInput}
-      onClickHandleRemoveFields={this.handleRemoveFields}
-      onClickHandleAddFields={this.handleAddFields}
+      // onClickHandleRemoveFields={this.handleRemoveFields}
+      // onClickHandleAddFields={this.handleAddFields}
 
       // onClickHandleSubmit={this.handleSubmit.bind(this)}
-      onClickHandleSubmit={this.handleSubmit}
+      // onClickHandleSubmit={this.handleSubmit}
 
     />
       button = <SubmitButton onClick={this.handleEditModeClick} />
     } else {
       renderingMode = <GeneralInformationDisplayMode 
         inputFields={this.state.inputFields}
-        onClickHandleEdit={this.handleDisplayModeClick}
+        // onClickHandleEdit={this.handleDisplayModeClick}
       />
       button = <EditButton onClick={this.handleDisplayModeClick} />
     }

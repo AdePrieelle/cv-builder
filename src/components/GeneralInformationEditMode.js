@@ -52,11 +52,13 @@ const GeneralInformationEditMode = (props) => {
                 <input type="text" name="inputEmail" id={"email"+index} value={inputField.inputEmail} onChange={e => props.onChangeInput(index, e)}></input>
                 <label htmlFor={"phone"+index}>Phone</label>
                 <input type="text" name="inputPhone" id={"phone"+index} value={inputField.inputPhone} onChange={e => props.onChangeInput(index, e)}></input>
+                <label htmlFor={"linkedIn"+index}>LinkedIn</label>
+                <input type="text" name="inputLinkedIn" id={"linkedIn"+index} value={inputField.inputLinkedIn} onChange={e => props.onChangeInput(index, e)}></input>
                 {/* <button onClick={props.onClickHandleRemoveFields.bind(this, index)}>delete</button> */}
-                <button onClick={e => props.onClickHandleRemoveFields(index, e)}>delete</button>
+                {/* <button onClick={e => props.onClickHandleRemoveFields(index, e)}>delete</button> */}
               </div>
           ))}
-          <button onClick={props.onClickHandleAddFields}>add</button>
+          {/* <button onClick={props.onClickHandleAddFields}>add</button> */}
 
           {/* <button type="submit" onClick={props.onClickHandleSubmit}>submit</button> */}
           {/* <button type="submit" onClick={props.onClickHandleSubmit.bind(this)}>submit</button> */}

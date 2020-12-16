@@ -19,15 +19,10 @@ class EducationalExperience extends React.Component {
       isInEditMode: true,
       inputFields: [
         {
-          inputSchool: "school one",
-          inputStudy: "study one",
-          inputDateStudy: "date one",
+          inputSchool: "",
+          inputStudy: "",
+          inputDateStudy: "",
         },
-        {
-          inputSchool: "school two",
-          inputStudy: "study two",
-          inputDateStudy: "date two",
-        }
       ],
     };
   }       
@@ -47,8 +42,8 @@ class EducationalExperience extends React.Component {
     this.setState({
       values
     });
-    console.log(index, e.target.name);
-    console.log(this.state.inputFields);
+    // console.log(index, e.target.name);
+    // console.log(this.state.inputFields);
   };
 
   handleSubmit = (e) => {
