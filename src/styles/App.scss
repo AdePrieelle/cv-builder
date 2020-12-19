@@ -37,3 +37,90 @@ textarea {
 //   text-transform: uppercase;
 //   font-weight: 700;
 // }
+
+.components-wrapper {
+  display: grid;
+  // grid-template-columns: 1fr;
+  // @media screen and (min-width: 600px) {
+  //   grid-template-columns: 1fr 2fr;
+  // }
+  grid-template-areas:
+    "name-function"
+    "contact"
+    "profile-description"
+    "education"
+    "professional-experience"
+    "expertise";
+  @media screen and (min-width: 600px) {
+    grid-template-areas:
+      "contact name-function"
+      "contact profile-description"
+      "education professional-experience"
+      "expertise professional-experience";
+  }
+}
+
+.contact {
+  // @media screen and (min-width: 600px) {
+  //   grid-column: 1;
+  //   grid-row: 1;
+  // }
+  grid-area: contact;
+  padding: 0 8px;
+  .profile-pic,
+  .contact-header,
+  .contact-options {
+    background-color: yellow;
+  }
+}
+
+.education {
+  // @media screen and (min-width: 600px) {
+  //   grid-column: 1;
+  //   grid-row: 2;
+  // }
+  grid-area: education;
+  padding: 0 8px;
+  .education-header,
+  .education-degrees {
+    background-color: yellow;
+  }
+}
+
+.expertise {
+  // @media screen and (min-width: 600px) {
+  //   grid-column: 1;
+  //   grid-row: 3;
+  // }
+  grid-area: expertise;
+  padding: 0 8px;
+  .expertise-header,
+  .expertise-skills {
+    background-color: yellow;
+  }
+}
+
+.name-function {
+  // order: 1;
+  // @media screen and (min-width: 600px) {
+  //   grid-column: 2;
+  //   grid-row: 1;
+  // }
+  grid-area: name-function;
+}
+
+.profile-description {
+  // @media screen and (min-width: 600px) {
+  //   grid-column: 2;
+  //   grid-row: 2;
+  // }
+  grid-area: profile-description;
+}
+
+.professional-experience {
+  // @media screen and (min-width: 600px) {
+  //   grid-column: 2;
+  //   grid-row: 3;
+  // }
+  grid-area: professional-experience;
+}
