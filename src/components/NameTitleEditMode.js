@@ -11,7 +11,7 @@ const NameTitleEditMode = (props) => {
                 <label htmlFor={"name"+index}>Name</label>
                 {/* <input type="text" name="inputName" id={"name"+index} value={inputField.inputName} onChange={props.onChangeInput.bind(this, index)}></input> */}
                 <input type="text" name="inputName" id={"name"+index} value={inputField.inputName} onChange={e => props.onChangeInput(index, e)}></input>
-                <label htmlFor={"study"+index}>Title</label>
+                <label htmlFor={"title"+index}>Title</label>
                 <input type="text" name="inputTitle" id={"title"+index} value={inputField.inputTitle} onChange={e => props.onChangeInput(index, e)}></input>
               </div>
           ))}

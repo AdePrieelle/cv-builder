@@ -45,19 +45,34 @@ textarea {
   //   grid-template-columns: 1fr 2fr;
   // }
   grid-template-areas:
-    "name-function"
-    "contact"
-    "profile-description"
-    "education"
-    "professional-experience"
-    "expertise";
+    // "name-function"
+    // "contact"
+    // "profile-description"
+    // "education"
+    // "professional-experience"
+    // "expertise";
+
+    "profile-pic name-function"
+    "contact contact"
+    "profile-description profile-description"
+    "education education"
+    "professional-experience professional-experience"
+    "expertise expertise";
   @media screen and (min-width: 600px) {
     grid-template-areas:
-      "contact name-function"
-      "contact profile-description"
-      "education professional-experience"
-      "expertise professional-experience";
+      "profile-pic name-function name-function"
+      "contact profile-description profile-description"
+      "education professional-experience professional-experience"
+      "expertise professional-experience professional-experience";
   }
+}
+
+.profile-pic {
+  grid-area: profile-pic;
+  // padding: 0 8px;
+  // .profile-avatar {
+  //   background-color: yellow;
+  // }
 }
 
 .contact {
@@ -66,12 +81,12 @@ textarea {
   //   grid-row: 1;
   // }
   grid-area: contact;
-  padding: 0 8px;
-  .profile-pic,
-  .contact-header,
-  .contact-options {
-    background-color: yellow;
-  }
+  // padding: 0 8px;
+  // // .profile-pic,
+  // .contact-header,
+  // .contact-options {
+  //   background-color: yellow;
+  // }
 }
 
 .education {
@@ -80,11 +95,11 @@ textarea {
   //   grid-row: 2;
   // }
   grid-area: education;
-  padding: 0 8px;
-  .education-header,
-  .education-degrees {
-    background-color: yellow;
-  }
+  // padding: 0 8px;
+  // .education-header,
+  // .education-degrees {
+  //   background-color: yellow;
+  // }
 }
 
 .expertise {
@@ -93,11 +108,11 @@ textarea {
   //   grid-row: 3;
   // }
   grid-area: expertise;
-  padding: 0 8px;
-  .expertise-header,
-  .expertise-skills {
-    background-color: yellow;
-  }
+  // padding: 0 8px;
+  // .expertise-header,
+  // .expertise-skills {
+  //   background-color: yellow;
+  // }
 }
 
 .name-function {

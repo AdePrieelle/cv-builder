@@ -6,6 +6,9 @@ import WorkExperience from "./components/WorkExperience";
 import NameTitle from "./components/NameTitle"
 import ProfileDescription from "./components/ProfileDescription"
 import Education from "./components/Education"
+import Expertise from "./components/Expertise"
+import ContactInformation from "./components/ContactInformation"
+import ProfessionalExperience from "./components/ProfessionalExperience"
 import './styles/App.scss';
 
 class App extends Component {
@@ -21,17 +24,21 @@ class App extends Component {
           {/* <GeneralInformation />
           <EducationalExperience />
           <WorkExperience /> */}
+          <div className="profile-pic">
+            <div className="profile-avatar">profile-pic</div>
+          </div>
           <div className="contact">
-            <div className="profile-pic">profile-pic</div>
-            <div className="contact-header-options">
-              <div className="contact-header">Contact</div>
+            {/* <div className="profile-pic">profile-pic</div> */}
+            {/* <div className="contact-header-options"> */}
+              {/* <div className="contact-header">Contact</div>
               <div className="contact-options">
                 <div className="phone">phone</div>
                 <div className="mail">mail</div>
                 <div className="location">location</div>
                 <div className="linkedIn">linkedIn</div>
-              </div>
-            </div>
+              </div> */}
+              <ContactInformation />
+            {/* </div> */}
           </div>
           <div className="education">
             {/* <div className="education-header">Education</div>
@@ -43,11 +50,12 @@ class App extends Component {
             <Education />
           </div>
           <div className="expertise">
-            <div className="expertise-header">Expertise</div>
+            {/* <div className="expertise-header">Expertise</div>
             <div className="expertise-skills">
               <div className="expertise-skill">team work</div>
               <div className="expertise-skill">project management</div>
-            </div>
+            </div> */}
+            <Expertise />
           </div>
           <div className="name-function">
             {/* <div className="name">Name</div>
@@ -60,7 +68,7 @@ class App extends Component {
             <ProfileDescription />
           </div>
           <div className="professional-experience">
-            <div className="professional-experience-header">Professional experience</div>
+            {/* <div className="professional-experience-header">Professional experience</div>
             <div className="professional-experience-jobs">
               <div className="professional-experience-job">
                 <div className="job-title">job title</div>
@@ -71,7 +79,8 @@ class App extends Component {
                 </div>
                 <div className="job-description">job description</div>
               </div>
-            </div>
+            </div> */}
+            <ProfessionalExperience />
           </div>
         </div>
       </div>
