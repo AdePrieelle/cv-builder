@@ -80,7 +80,7 @@ class Expertise extends React.Component {
     />
       button = <SubmitButton onClick={this.handleEditModeClick} />
     } else {
-      renderingMode = <ExpertiseDisplayMode 
+      renderingMode = <ExpertiseDisplayMode
         inputFields={this.state.inputFields}
         // onClickHandleEdit={this.handleDisplayModeClick}
       />

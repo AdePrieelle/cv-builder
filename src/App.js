@@ -9,6 +9,7 @@ import Education from "./components/Education"
 import Expertise from "./components/Expertise"
 import ContactInformation from "./components/ContactInformation"
 import ProfessionalExperience from "./components/ProfessionalExperience"
+import ProfilePicture from "./components/ProfilePicture"
 import './styles/App.scss';
 
 class App extends Component {
@@ -25,7 +26,10 @@ class App extends Component {
           <EducationalExperience />
           <WorkExperience /> */}
           <div className="profile-pic">
-            <div className="profile-avatar">profile-pic</div>
+            {/* <div className="profile-avatar">profile-pic</div> */}
+            <div className="profile-avatar">
+              <ProfilePicture />
+            </div>
           </div>
           <div className="contact">
             {/* <div className="profile-pic">profile-pic</div> */}

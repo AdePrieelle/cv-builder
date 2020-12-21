@@ -1,13 +1,14 @@
 import React from "react";
 
-const ExpertiseDisplayMode = (props) => {
+const ProfilePictureDisplayMode = (props) => {
   return (
     <div className="component">
-        <div className="component-header-display-mode">Expertise</div>
         <div className="component-props">
           {props.inputFields.map((inputField, index) => (
                 <div key={index}>
-                  <div className="props-value">{inputField.inputExpertise}</div>
+                  <div className="props-value">
+                    <img src={inputField.inputProfilePicture} alt="profilepic"></img>
+                  </div>
                 </div>
             ))}
         </div>
@@ -16,4 +17,4 @@ const ExpertiseDisplayMode = (props) => {
   );
 };
 
-export default ExpertiseDisplayMode;
+export default ProfilePictureDisplayMode;

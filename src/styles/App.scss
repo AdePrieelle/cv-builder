@@ -38,6 +38,12 @@ textarea {
 //   font-weight: 700;
 // }
 
+.inputfile {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+}
+
 .components-wrapper {
   display: grid;
   // grid-template-columns: 1fr;
