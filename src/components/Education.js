@@ -65,9 +65,12 @@ class Education extends React.Component {
       inputFields: values
     });
   };
-          
+
+  
   render() {
     
+    // const isInCvEditMode = this.props.isInCvEditMode;
+
     const isInEditMode = this.state.isInEditMode;
     let renderingMode;
     let button;
@@ -79,19 +82,21 @@ class Education extends React.Component {
       onClickHandleRemoveFields={this.handleRemoveFields}
       onClickHandleAddFields={this.handleAddFields}
       // isInCvEditMode = {this.props.isInCvEditMode}
+      isInCvEditMode = {this.props.isInCvEditMode}
+
       // onClickHandleSubmit={this.handleSubmit}
     />
-      if(this.props.isInCvEditMode) {
+      // if(this.props.isInCvEditMode) {
         button = <SubmitButton onClick={this.handleEditModeClick} />
-      }
+      // }
     } else {
       renderingMode = <EducationDisplayMode 
         inputFields={this.state.inputFields}
         // onClickHandleEdit={this.handleDisplayModeClick}
       />
-      if(this.props.isInCvEditMode) {
+      // if(this.props.isInCvEditMode) {
         button = <EditButton onClick={this.handleDisplayModeClick} />
-      }
+      // }
     }
 
 
@@ -99,7 +104,7 @@ class Education extends React.Component {
       <div>
         <div className="component-item">
           {renderingMode}
-          {button}
+          {this.props.isInCvEditMode && button}
         </div>
       </div>
     )

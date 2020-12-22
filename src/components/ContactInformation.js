@@ -65,17 +65,17 @@ class ContactInformation extends React.Component {
       // onClickHandleSubmit={this.handleSubmit}
 
     />
-      if(this.props.isInCvEditMode) {
+      // if(this.props.isInCvEditMode) {
         button = <SubmitButton onClick={this.handleEditModeClick} />
-      }
+      // }
     } else {
       renderingMode = <ContactInformationDisplayMode 
         inputFields={this.state.inputFields}
         // onClickHandleEdit={this.handleDisplayModeClick}
       />
-      if(this.props.isInCvEditMode) {
+      // if(this.props.isInCvEditMode) {
         button = <EditButton onClick={this.handleDisplayModeClick} />
-      }
+      // }
     }
 
 
@@ -83,7 +83,7 @@ class ContactInformation extends React.Component {
       <div>
         <div className="component-item">
           {renderingMode}
-          {button}
+          {this.props.isInCvEditMode && button}
         </div>
       </div>
     )

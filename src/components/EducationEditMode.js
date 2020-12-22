@@ -14,11 +14,24 @@ const EducationEditMode = (props) => {
                 <input type="text" name="inputStudy" id={"study"+index} value={inputField.inputStudy} onChange={e => props.onChangeInput(index, e)}></input>
                 <label htmlFor={"date-study"+index}>Date of study</label>
                 <input type="text" name="inputDateStudy" id={"date-study"+index} value={inputField.inputDateStudy} onChange={e => props.onChangeInput(index, e)}></input>
+                
                 {/* <button onClick={props.onClickHandleRemoveFields.bind(this, index)}>delete</button> */}
-                <button onClick={e => props.onClickHandleRemoveFields(index, e)}>delete</button>
+                {/* <button onClick={e => props.onClickHandleRemoveFields(index, e)}>delete</button> */}
+
+                {/* {(props.isInCvEditMode) ?
+                  <button onClick={e => props.onClickHandleRemoveFields(index, e)}>delete</button>
+                  : null
+                } */}
+                {props.isInCvEditMode 
+                  && <button onClick={e => props.onClickHandleRemoveFields(index, e)}>delete</button>
+                }
+                
               </div>
           ))}
-          <button onClick={props.onClickHandleAddFields}>add</button>
+          {props.isInCvEditMode 
+            && <button onClick={props.onClickHandleAddFields}>add</button>
+          }
+          {/* <button onClick={props.onClickHandleAddFields}>add</button> */}
 
           {/* <button type="submit" onClick={props.onClickHandleSubmit}>submit</button> */}
           {/* <button type="submit" onClick={props.onClickHandleSubmit.bind(this)}>submit</button> */}

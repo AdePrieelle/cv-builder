@@ -83,18 +83,18 @@ class ProfilePicture extends React.Component {
       // onClickHandleSubmit={this.handleSubmit}
 
     />
-      if(this.props.isInCvEditMode) {
+      // if(this.props.isInCvEditMode) {
         button = <SubmitButton onClick={this.handleEditModeClick} />
-      }
+      // }
     } else {
       renderingMode = <ProfilePictureDisplayMode
         inputFields={this.state.inputFields}
         // inputProfilePicture={this.state.inputProfilePicture}
         // onClickHandleEdit={this.handleDisplayModeClick}
       />
-      if(this.props.isInCvEditMode) {
+      // if(this.props.isInCvEditMode) {
         button = <EditButton onClick={this.handleDisplayModeClick} />
-      }
+      // }
     }
 
 
@@ -102,7 +102,7 @@ class ProfilePicture extends React.Component {
       <div>
         <div className="component-item">
           {renderingMode}
-          {button}
+          {this.props.isInCvEditMode && button}
         </div>
       </div>
     )

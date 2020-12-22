@@ -22,10 +22,17 @@ const ProfessionalExperienceEditMode = (props) => {
                 <label htmlFor={"job-description"+index}>Job Description</label>
                 <textarea name="inputJobDescription" id={"job-description"+index} value={inputField.inputJobDescription} onChange={e => props.onChangeInput(index, e)}></textarea>
                 {/* <button onClick={props.onClickHandleRemoveFields.bind(this, index)}>delete</button> */}
-                <button onClick={e => props.onClickHandleRemoveFields(index, e)}>delete</button>
+                {/* <button onClick={e => props.onClickHandleRemoveFields(index, e)}>delete</button> */}
+                {props.isInCvEditMode 
+                 && <button onClick={e => props.onClickHandleRemoveFields(index, e)}>delete</button>
+                }
               </div>
           ))}
-          <button onClick={props.onClickHandleAddFields}>add</button>
+          {/* <button onClick={props.onClickHandleAddFields}>add</button> */}
+          {props.isInCvEditMode
+           && <button onClick={props.onClickHandleAddFields}>add</button>
+          }
+
 
           {/* <button type="submit" onClick={props.onClickHandleSubmit}>submit</button> */}
           {/* <button type="submit" onClick={props.onClickHandleSubmit.bind(this)}>submit</button> */}

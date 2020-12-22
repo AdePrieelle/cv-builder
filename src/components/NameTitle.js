@@ -54,23 +54,23 @@ class NameTitle extends React.Component {
       inputFields={this.state.inputFields}
       onChangeInput={this.handleChangeInput}
     />
-      if(this.props.isInCvEditMode) {
+      // if(this.props.isInCvEditMode) {
         button = <SubmitButton onClick={this.handleEditModeClick} />
-      }
+      // }
     } else {
       renderingMode = <NameTitleDisplayMode 
         inputFields={this.state.inputFields}
       />
-      if(this.props.isInCvEditMode) {
+      // if(this.props.isInCvEditMode) {
         button = <EditButton onClick={this.handleDisplayModeClick} />
-      }
+      // }
     }
 
     return (
       <div>
         <div className="component-item">
           {renderingMode}
-          {button}
+          {this.props.isInCvEditMode && button}
         </div>
       </div>
     )
