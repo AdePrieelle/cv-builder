@@ -78,15 +78,20 @@ class Education extends React.Component {
       onChangeInput={this.handleChangeInput}
       onClickHandleRemoveFields={this.handleRemoveFields}
       onClickHandleAddFields={this.handleAddFields}
+      // isInCvEditMode = {this.props.isInCvEditMode}
       // onClickHandleSubmit={this.handleSubmit}
     />
-      button = <SubmitButton onClick={this.handleEditModeClick} />
+      if(this.props.isInCvEditMode) {
+        button = <SubmitButton onClick={this.handleEditModeClick} />
+      }
     } else {
       renderingMode = <EducationDisplayMode 
         inputFields={this.state.inputFields}
         // onClickHandleEdit={this.handleDisplayModeClick}
       />
-      button = <EditButton onClick={this.handleDisplayModeClick} />
+      if(this.props.isInCvEditMode) {
+        button = <EditButton onClick={this.handleDisplayModeClick} />
+      }
     }
 
 

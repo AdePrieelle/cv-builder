@@ -53,12 +53,16 @@ class ProfileDescription extends React.Component {
       inputFields={this.state.inputFields}
       onChangeInput={this.handleChangeInput}
     />
-      button = <SubmitButton onClick={this.handleEditModeClick} />
+      if(this.props.isInCvEditMode) {
+        button = <SubmitButton onClick={this.handleEditModeClick} />
+      }
     } else {
       renderingMode = <ProfileDescriptionDisplayMode 
         inputFields={this.state.inputFields}
       />
-      button = <EditButton onClick={this.handleDisplayModeClick} />
+      if(this.props.isInCvEditMode) {
+        button = <EditButton onClick={this.handleDisplayModeClick} />
+      }
     }
 
     return (

@@ -78,13 +78,17 @@ class Expertise extends React.Component {
       // onClickHandleSubmit={this.handleSubmit}
 
     />
-      button = <SubmitButton onClick={this.handleEditModeClick} />
+      if(this.props.isInCvEditMode) {
+        button = <SubmitButton onClick={this.handleEditModeClick} />
+      }
     } else {
       renderingMode = <ExpertiseDisplayMode
         inputFields={this.state.inputFields}
         // onClickHandleEdit={this.handleDisplayModeClick}
       />
-      button = <EditButton onClick={this.handleDisplayModeClick} />
+      if(this.props.isInCvEditMode) {
+        button = <EditButton onClick={this.handleDisplayModeClick} />
+      }
     }
 
 
