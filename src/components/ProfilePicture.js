@@ -69,7 +69,8 @@ class ProfilePicture extends React.Component {
     const isInEditMode = this.state.isInEditMode;
     let renderingMode;
     let button;
-    if (isInEditMode) {
+    // show edit mode only when the component and cv are in edit mode
+    if (isInEditMode && this.props.isInCvEditMode) {
       renderingMode = <ProfilePictureEditMode 
       // onSubmitFormHandleSubmit={this.handleSubmit.bind(this)}
       onSubmitFormHandleSubmit={this.handleSubmit}

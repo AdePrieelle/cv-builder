@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Header from "./components/Header"
-import GeneralInformation from "./components/GeneralInformation";
-import EducationalExperience from "./components/EducationalExperience";
-import WorkExperience from "./components/WorkExperience";
+// import GeneralInformation from "./components/GeneralInformation";
+// import EducationalExperience from "./components/EducationalExperience";
+// import WorkExperience from "./components/WorkExperience";
 import NameTitle from "./components/NameTitle"
 import ProfileDescription from "./components/ProfileDescription"
 import Education from "./components/Education"
