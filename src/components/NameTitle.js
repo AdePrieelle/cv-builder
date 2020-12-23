@@ -18,7 +18,7 @@ class NameTitle extends React.Component {
       inputFields: [
         {
           inputName: "",
-          inputJobTitle: "",
+          inputTitle: "",
         },
       ],
     };
