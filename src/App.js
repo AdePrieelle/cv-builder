@@ -10,6 +10,8 @@ import Expertise from "./components/Expertise"
 import ContactInformation from "./components/ContactInformation"
 import ProfessionalExperience from "./components/ProfessionalExperience"
 import ProfilePicture from "./components/ProfilePicture"
+// import ToggleButton from "./components/ToggleButton"
+import ToggleButtonText from "./components/ToggleButtonText";
 import './styles/App.scss';
 
 class App extends Component {
@@ -18,9 +20,11 @@ class App extends Component {
 
     this.handleCvEditModeClick = this.handleCvEditModeClick.bind(this);
     this.handleCvDisplayModeClick = this.handleCvDisplayModeClick.bind(this);
+    this.changeToggleButtonState = this.changeToggleButtonState.bind(this);
 
     this.state = {
       isInCvEditMode: true,
+      isToggled: false,
     };
   }
 
@@ -30,6 +34,10 @@ class App extends Component {
 
   handleCvDisplayModeClick() {
     this.setState({isInCvEditMode: true});
+  }
+
+  changeToggleButtonState() {
+    this.setState({isInCvEditMode: !this.state.isInCvEditMode});
   }
 
   render() {
@@ -44,7 +52,10 @@ class App extends Component {
     return (
       <div>
         <Header />
-        {button}
+        {/* {button} */}
+        <div className="toggle-button-text-container">
+          <ToggleButtonText changeToggleButtonState={this.changeToggleButtonState}/>
+        </div>
         <div className="components-wrapper">
           {/* <GeneralInformation />
           <EducationalExperience />
