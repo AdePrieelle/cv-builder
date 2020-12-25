@@ -1,0 +1,29 @@
+.component-header-display-mode-contact {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  .contact-icon-container {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(77, 77, 77);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    .contact-icon {
+      font-size: 1rem;
+      color: white;
+    }
+  }
+  .props-value {
+    word-break: break-all;
+    max-width: 150px;
+  }
+}
