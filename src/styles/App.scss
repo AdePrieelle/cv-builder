@@ -8,6 +8,10 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  background-color: #d5c3c3;
+}
+
 .toggle-button-text-container {
   margin-top: 100px;
 }
@@ -55,6 +59,7 @@ html {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   border-radius: 4px;
   // background-color: rgb(255, 211, 65);
+  background-color: #f3f3f3;
 }
 
 input {
@@ -79,7 +84,7 @@ textarea {
 .inputfile {
   width: 200px;
   height: 200px;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 .components-wrapper {

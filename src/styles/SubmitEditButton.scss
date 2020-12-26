@@ -1,0 +1,13 @@
+@import "./partials/variables";
+
+.submit-edit-button {
+  width: 100%;
+  font-weight: 700;
+  border: none;
+  background-color: $primary-color;
+  padding: 8px 0px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 10px;
+}
