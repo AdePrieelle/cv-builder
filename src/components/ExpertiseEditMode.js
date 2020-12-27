@@ -1,4 +1,6 @@
 import React from "react";
+import DeleteButton from "./DeleteButton"
+import AddButton from "./AddButton"
 
 const ExpertiseEditMode = (props) => {
   return (
@@ -16,13 +18,15 @@ const ExpertiseEditMode = (props) => {
                 {/* <button onClick={props.onClickHandleRemoveFields.bind(this, index)}>delete</button> */}
                 {/* <button onClick={e => props.onClickHandleRemoveFields(index, e)}>delete</button> */}
                 {props.isInCvEditMode 
-                  && <button onClick={e => props.onClickHandleRemoveFields(index, e)}>delete</button>
+                  // && <button onClick={e => props.onClickHandleRemoveFields(index, e)}>delete</button>
+                  && <DeleteButton onClickHandleRemoveFields={e => props.onClickHandleRemoveFields(index, e)} />
                 }
               </div>
           ))}
           {/* <button onClick={props.onClickHandleAddFields}>add</button> */}
           {props.isInCvEditMode
-           && <button onClick={props.onClickHandleAddFields}>add</button>
+          //  && <button onClick={props.onClickHandleAddFields}>add</button>
+          && <AddButton onClickHandleAddFields={props.onClickHandleAddFields} />
           }
 
           {/* <button type="submit" onClick={props.onClickHandleSubmit}>submit</button> */}

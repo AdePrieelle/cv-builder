@@ -1,9 +1,9 @@
 import React from "react";
-import "../styles/SubmitEditButton.scss"
+import "../styles/SubmitButton.scss"
 
 const SubmitButton = (props) => {
   return (
-    <button className="submit-edit-button" onClick={props.onClick}>
+    <button className="submit-button" onClick={props.onClick}>
       Submit
     </button>
   );

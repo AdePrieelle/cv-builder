@@ -1,15 +1,15 @@
 import React from "react";
-import "../styles/EditButton.scss"
+import "../styles/DeleteButton.scss"
 
-const EditButton = (props) => {
+const DeleteButton = (props) => {
   return (
     // <button className="submit-edit-button" onClick={props.onClick}>
     //   Edit
     // </button>
     // <button className="edit-button" onClick={props.onClick}>
-      <i class="fas fa-edit edit-icon" onClick={props.onClick}></i>
+      <i className="far fa-minus-square delete-icon" onClick={props.onClickHandleRemoveFields}></i>
     // </button>
   );
 };
 
-export default EditButton;
+export default DeleteButton;

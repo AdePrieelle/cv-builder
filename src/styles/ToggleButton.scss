@@ -1,3 +1,5 @@
+@import "./partials/variables";
+
 .switch {
   // margin: 100px auto 20px auto;
   position: relative;
@@ -26,7 +28,7 @@
   bottom: 0;
 
   // background-color: #ccc;
-  background-color: rgb(150, 150, 150);
+  background-color: $toggle-button-edit-color;
 
   transition: 0.4s;
 }
@@ -47,7 +49,7 @@
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: $toggle-button-preview-color;
 }
 
 input:checked + .slider:before {

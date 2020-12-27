@@ -1,4 +1,6 @@
 import React from "react";
+import DeleteButton from "./DeleteButton"
+import AddButton from "./AddButton"
 
 const EducationEditMode = (props) => {
   return (
@@ -23,13 +25,15 @@ const EducationEditMode = (props) => {
                   : null
                 } */}
                 {props.isInCvEditMode 
-                  && <button onClick={e => props.onClickHandleRemoveFields(index, e)}>delete</button>
+                  // && <button onClick={e => props.onClickHandleRemoveFields(index, e)}>delete</button>
+                  && <DeleteButton onClickHandleRemoveFields={e => props.onClickHandleRemoveFields(index, e)} />
                 }
                 
               </div>
           ))}
           {props.isInCvEditMode 
-            && <button onClick={props.onClickHandleAddFields}>add</button>
+            // && <button onClick={props.onClickHandleAddFields}>add</button>
+            && <AddButton onClickHandleAddFields={props.onClickHandleAddFields} />
           }
           {/* <button onClick={props.onClickHandleAddFields}>add</button> */}
 
