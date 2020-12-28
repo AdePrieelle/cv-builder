@@ -76,6 +76,9 @@ class App extends Component {
                 <div className="location">location</div>
                 <div className="linkedIn">linkedIn</div>
               </div> */}
+              <div className="component-divide-line-wrapper">
+                <div className="component-divide-line"></div>
+              </div>
               <ContactInformation isInCvEditMode={this.state.isInCvEditMode} />
             {/* </div> */}
           </div>
@@ -86,6 +89,7 @@ class App extends Component {
               <div className="uni">uni</div>
               <div className="year">year</div>
             </div> */}
+            <div className="component-divide-line"></div>
             <Education isInCvEditMode={this.state.isInCvEditMode} />
           </div>
           <div className="expertise">
@@ -94,6 +98,7 @@ class App extends Component {
               <div className="expertise-skill">team work</div>
               <div className="expertise-skill">project management</div>
             </div> */}
+            <div className="component-divide-line"></div>
             <Expertise isInCvEditMode={this.state.isInCvEditMode} />
           </div>
           <div className="name-function">
@@ -104,6 +109,7 @@ class App extends Component {
           <div className="profile-description">
             {/* <div className="profile-header">Profile</div>
             <div className="profile-text">profile-text</div> */}
+            <div className="component-divide-line"></div>
             <ProfileDescription isInCvEditMode={this.state.isInCvEditMode} />
           </div>
           <div className="professional-experience">
@@ -119,7 +125,9 @@ class App extends Component {
                 <div className="job-description">job description</div>
               </div>
             </div> */}
+            <div className="component-divide-line"></div>
             <ProfessionalExperience isInCvEditMode={this.state.isInCvEditMode} />
+
           </div>
         </div>
       </div>

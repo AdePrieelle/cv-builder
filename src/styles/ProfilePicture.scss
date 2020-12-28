@@ -1,0 +1,27 @@
+// .img-profile-picture-container-wrapper {
+//   display: flex;
+//   justify-content: center;
+//   padding-top: 10px;
+// }
+
+.img-profile-picture-container {
+  border-radius: 50%;
+  // width: 200px;
+  // height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // width: 100%;
+  // height: auto;
+  padding: 10px 10px;
+  @media screen and (min-width: 600px) {
+    padding: 10px 30px;
+  }
+  // border: 10px solid rgb(255, 255, 255);
+}
+
+.img-profile-picture {
+  width: 100%;
+  height: auto;
+  // border-radius: 50%;
+}

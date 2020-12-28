@@ -1,3 +1,5 @@
+@import "./partials/variables";
+
 html {
   box-sizing: border-box;
 }
@@ -14,6 +16,14 @@ body {
 
 .toggle-button-text-container {
   margin-top: 100px;
+}
+
+.component-header-edit-mode {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
 }
 
 // .toggle-button-text {
@@ -60,7 +70,27 @@ body {
   border-radius: 4px;
   // background-color: rgb(255, 211, 65);
   background-color: #f3f3f3;
+  > * {
+    // border-bottom: 1px solid black;
+    // padding-bottom: 30px;
+    // padding-top: 20px;
+    background-color: #e2dedf;
+  }
 }
+
+// .component-divide-line-wrapper {
+//   margin-top: 20px;
+//   margin-bottom: 20px;
+.component-divide-line {
+  height: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  // width: 80%;
+  // padding: 0 20px;
+  background-color: rgb(150, 150, 150);
+  // margin: 30px auto 20px auto;
+}
+// }
 
 input {
   width: 100%;
@@ -69,6 +99,11 @@ input {
 textarea {
   width: 100%;
   resize: none;
+}
+
+.props-value-name-title {
+  width: 100%;
+  display: block;
 }
 
 // button {
@@ -81,18 +116,16 @@ textarea {
 //   font-weight: 700;
 // }
 
-.inputfile {
-  width: 200px;
-  height: 200px;
-  // border: 1px solid red;
-}
-
 .components-wrapper {
   display: grid;
   // grid-template-columns: 1fr;
   // @media screen and (min-width: 600px) {
   //   grid-template-columns: 1fr 2fr;
   // }
+  grid-template-columns: repeat(3, 1fr);
+  @media screen and (min-width: 600px) {
+    grid-column-gap: 20px;
+  }
   grid-template-areas:
     // "name-function"
     // "contact"
@@ -101,12 +134,12 @@ textarea {
     // "professional-experience"
     // "expertise";
 
-    "profile-pic name-function"
-    "contact contact"
-    "profile-description profile-description"
-    "education education"
-    "professional-experience professional-experience"
-    "expertise expertise";
+    "profile-pic name-function name-function"
+    "contact contact contact"
+    "profile-description profile-description profile-description"
+    "education education education"
+    "professional-experience professional-experience professional-experience"
+    "expertise expertise expertise";
   @media screen and (min-width: 600px) {
     grid-template-areas:
       "profile-pic name-function name-function"
@@ -118,6 +151,8 @@ textarea {
 
 .profile-pic {
   grid-area: profile-pic;
+  padding: $left-column-padding;
+  padding-bottom: 0;
   // padding: 0 8px;
   // .profile-avatar {
   //   background-color: yellow;
@@ -130,6 +165,9 @@ textarea {
   //   grid-row: 1;
   // }
   grid-area: contact;
+  // padding: 0 $left-column-padding 0 $left-column-padding;
+  padding: $left-column-top-padding $left-column-padding 0 $left-column-padding;
+
   // padding: 0 8px;
   // // .profile-pic,
   // .contact-header,
@@ -144,6 +182,9 @@ textarea {
   //   grid-row: 2;
   // }
   grid-area: education;
+  // padding: 0 $left-column-padding;
+  padding: $left-column-top-padding $left-column-padding 0 $left-column-padding;
+
   // padding: 0 8px;
   // .education-header,
   // .education-degrees {
@@ -157,6 +198,12 @@ textarea {
   //   grid-row: 3;
   // }
   grid-area: expertise;
+  // border-bottom: 0;
+  padding: 0 $left-column-padding;
+  // padding-bottom: $left-column-padding;
+  padding: $left-column-top-padding $left-column-padding $left-column-padding
+    $left-column-padding;
+
   // padding: 0 8px;
   // .expertise-header,
   // .expertise-skills {
@@ -171,6 +218,7 @@ textarea {
   //   grid-row: 1;
   // }
   grid-area: name-function;
+  padding: $left-column-padding;
 }
 
 .profile-description {
@@ -179,6 +227,8 @@ textarea {
   //   grid-row: 2;
   // }
   grid-area: profile-description;
+  // padding: 0 $left-column-padding;
+  padding: $left-column-top-padding $left-column-padding 0 $left-column-padding;
 }
 
 .professional-experience {
@@ -187,4 +237,10 @@ textarea {
   //   grid-row: 3;
   // }
   grid-area: professional-experience;
+  // padding: 0 $left-column-padding;
+  padding: $left-column-top-padding $left-column-padding 0 $left-column-padding;
+
+  // @media screen and (min-width: 600px) {
+  //   border-bottom: 0;
+  // }
 }

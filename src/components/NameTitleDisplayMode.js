@@ -5,7 +5,7 @@ const NameTitleDisplayMode = (props) => {
     <div className="component">
         <div className="component-props">
           {props.inputFields.map((inputField, index) => (
-                <div key={index}>
+                <div key={index} className="props-value-name-title">
                   <div className="props-value">{inputField.inputName}</div>
                   <div className="props-value">{inputField.inputTitle}</div>
                 </div>

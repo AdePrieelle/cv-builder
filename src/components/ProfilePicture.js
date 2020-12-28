@@ -3,6 +3,7 @@ import ProfilePictureEditMode from "./ProfilePictureEditMode";
 import ProfilePictureDisplayMode from "./ProfilePictureDisplayMode";
 import EditButton from "./EditButton";
 import SubmitButton from "./SubmitButton";
+import "../styles/ProfilePicture.scss"
 
 class ProfilePicture extends React.Component {
   constructor(props) {
