@@ -42,6 +42,20 @@ body {
   }
 }
 
+.component-input-wrapper {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.component-input-wrapper-expertise {
+  position: relative;
+  margin-bottom: 10px;
+  input {
+    margin-top: 0px;
+    margin-bottom: 16px;
+  }
+}
+
 .component-item {
   position: relative;
   // padding: 0 10px;

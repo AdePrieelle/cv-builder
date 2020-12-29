@@ -11,7 +11,7 @@ const ProfessionalExperienceEditMode = (props) => {
 
           <div className="component-header-edit-mode component-header-edit-mode-left">Professional Experience</div>
           {props.inputFields.map((inputField, index) => (
-              <div key={index}>
+              <div key={index} className="component-input-wrapper">
                 <label htmlFor={"job-title"+index}>Job Title</label>
                 {/* <input type="text" name="inputName" id={"name"+index} value={inputField.inputName} onChange={props.onChangeInput.bind(this, index)}></input> */}
                 <input type="text" name="inputJobTitle" id={"job-title"+index} value={inputField.inputJobTitle} onChange={e => props.onChangeInput(index, e)}></input>

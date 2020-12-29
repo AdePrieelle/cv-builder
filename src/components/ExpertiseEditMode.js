@@ -11,7 +11,7 @@ const ExpertiseEditMode = (props) => {
 
           <div className="component-header-edit-mode">Expertise</div>
           {props.inputFields.map((inputField, index) => (
-              <div key={index}>
+              <div key={index} className="component-input-wrapper-expertise">
                 {/* <label htmlFor={"school"+index}>School</label> */}
                 {/* <input type="text" name="inputName" id={"name"+index} value={inputField.inputName} onChange={props.onChangeInput.bind(this, index)}></input> */}
                 <input type="text" name="inputExpertise" id={"expertise"+index} value={inputField.inputExpertise} onChange={e => props.onChangeInput(index, e)}></input>
