@@ -9,7 +9,7 @@ const ProfessionalExperienceEditMode = (props) => {
         {/* <form onSubmit={props.onSubmitFormHandleSubmit.bind(this)}> */}
         <form onSubmit={e => props.onSubmitFormHandleSubmit(e)}>
 
-          <div className="component-header-edit-mode">Professional Experience</div>
+          <div className="component-header-edit-mode component-header-edit-mode-left">Professional Experience</div>
           {props.inputFields.map((inputField, index) => (
               <div key={index}>
                 <label htmlFor={"job-title"+index}>Job Title</label>

@@ -18,12 +18,33 @@ body {
   margin-top: 100px;
 }
 
-.component-header-edit-mode {
+.component-header-edit-mode,
+.component-header-display-mode {
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   margin-top: 0;
   display: flex;
   justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 20px 0 20px;
+  @media screen and (min-width: 600px) {
+    // justify-content: start;
+  }
+}
+
+.component-header-edit-mode-left,
+.component-header-display-mode-left {
+  @media screen and (min-width: 600px) {
+    justify-content: start;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.component-item {
+  position: relative;
+  // padding: 0 10px;
 }
 
 // .toggle-button-text {
@@ -83,11 +104,11 @@ body {
 //   margin-bottom: 20px;
 .component-divide-line {
   height: 1px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   // width: 80%;
   // padding: 0 20px;
-  background-color: rgb(150, 150, 150);
+  background-color: $divide-line-color;
   // margin: 30px auto 20px auto;
 }
 // }
@@ -137,8 +158,8 @@ textarea {
     "profile-pic name-function name-function"
     "contact contact contact"
     "profile-description profile-description profile-description"
-    "education education education"
     "professional-experience professional-experience professional-experience"
+    "education education education"
     "expertise expertise expertise";
   @media screen and (min-width: 600px) {
     grid-template-areas:
@@ -153,6 +174,7 @@ textarea {
   grid-area: profile-pic;
   padding: $left-column-padding;
   padding-bottom: 0;
+  padding-top: 40px;
   // padding: 0 8px;
   // .profile-avatar {
   //   background-color: yellow;
@@ -219,6 +241,7 @@ textarea {
   // }
   grid-area: name-function;
   padding: $left-column-padding;
+  padding-top: 40px;
 }
 
 .profile-description {

@@ -3,7 +3,7 @@ import React from "react";
 const ProfessionalExperienceDisplayMode = (props) => {
   return (
     <div className="component">
-        <div className="component-header-display-mode">Professional Experience</div>
+        <div className="component-header-display-mode component-header-display-mode-left">Professional Experience</div>
         <div className="component-props">
           {props.inputFields.map((inputField, index) => (
                 <div key={index}>

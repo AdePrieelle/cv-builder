@@ -7,7 +7,7 @@ const EditButton = (props) => {
     //   Edit
     // </button>
     // <button className="edit-button" onClick={props.onClick}>
-      <i class="fas fa-edit edit-icon" onClick={props.onClick}></i>
+      <i className="fas fa-edit edit-icon" onClick={props.onClick}></i>
     // </button>
   );
 };
