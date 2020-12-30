@@ -7,7 +7,7 @@ const ProfileDescriptionDisplayMode = (props) => {
         <div className="component-props">
           {props.inputFields.map((inputField, index) => (
                 <div key={index}>
-                  <div className="props-value">{inputField.inputProfileDescription}</div>
+                  <div className="props-value props-value-profile-description">{inputField.inputProfileDescription}</div>
                 </div>
             ))}
         </div>

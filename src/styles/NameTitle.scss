@@ -1,0 +1,27 @@
+.component-name-title {
+  margin-top: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  word-break: break-word;
+  @media screen and (min-width: 360px) {
+    word-break: normal;
+  }
+}
+
+.props-value-name-title-inputname {
+  font-size: 16px;
+  @media screen and (min-width: 650px) {
+    font-size: 32px;
+  }
+  padding-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.props-value-name-title-inputtitle {
+  font-size: 14px;
+  @media screen and (min-width: 650px) {
+    font-size: 20px;
+  }
+  font-weight: 300;
+}

@@ -7,7 +7,7 @@ const ExpertiseDisplayMode = (props) => {
         <div className="component-props">
           {props.inputFields.map((inputField, index) => (
                 <div key={index}>
-                  <div className="props-value">{inputField.inputExpertise}</div>
+                  <div className="props-value props-value-inputexpertise">{inputField.inputExpertise}</div>
                 </div>
             ))}
         </div>

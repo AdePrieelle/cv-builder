@@ -2,18 +2,18 @@ import React from "react";
 
 const ProfessionalExperienceDisplayMode = (props) => {
   return (
-    <div className="component">
+    <div className="component component-professionalexperience">
         <div className="component-header-display-mode component-header-display-mode-left">Professional Experience</div>
         <div className="component-props">
           {props.inputFields.map((inputField, index) => (
-                <div key={index}>
-                  <div className="props-value">{inputField.inputJobTitle}</div>
+                <div key={index} className="professionalexperience-props-values">
+                  <div className="props-value props-value-inputjobtitle">{inputField.inputJobTitle}</div>
                   <div className="company-location-date">
-                    <div className="props-value">{inputField.inputCompany}</div>
-                    <div className="props-value">{inputField.inputJobLocation}</div>
-                    <div className="props-value">{inputField.inputJobDate}</div>
+                    <div className="props-value props-value-inputcompany">{inputField.inputCompany}</div>
+                    <div className="props-value props-value-inputjoblocation">{inputField.inputJobLocation}</div>
+                    <div className="props-value props-value-inputjobdate">{inputField.inputJobDate}</div>
                   </div>
-                  <div className="props-value">{inputField.inputJobDescription}</div>
+                  <div className="props-value props-value-inputJobDescription">{inputField.inputJobDescription}</div>
                 </div>
             ))}
         </div>

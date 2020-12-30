@@ -101,7 +101,7 @@ class ProfessionalExperience extends React.Component {
 
     return (
       <div>
-        <div className="component-item">
+        <div className="component-item component-item-professionalexperience">
           {renderingMode}
           {this.props.isInCvEditMode && button}
         </div>

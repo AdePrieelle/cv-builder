@@ -10,20 +10,22 @@
   margin-bottom: 10px;
   .contact-icon-container {
     width: 30px;
+    min-width: 30px;
+    min-height: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: rgb(77, 77, 77);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 10px;
+    margin-right: 14px;
     .contact-icon {
       font-size: 1rem;
       color: white;
     }
   }
   .props-value {
-    word-break: break-all;
-    max-width: 150px;
+    word-break: break-word;
+    font-weight: 300;
   }
 }

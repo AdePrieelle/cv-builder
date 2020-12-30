@@ -3,6 +3,7 @@ import NameTitleEditMode from "./NameTitleEditMode";
 import NameTitleDisplayMode from "./NameTitleDisplayMode";
 import EditButton from "./EditButton";
 import SubmitButton from "./SubmitButton";
+import "../styles/NameTitle.scss";
 
 class NameTitle extends React.Component {
   constructor(props) {
