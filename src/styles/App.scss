@@ -120,8 +120,8 @@ input {
 
 .components-wrapper {
   width: 80%;
-  max-width: 600px;
-  margin: 30px auto 30px auto;
+  max-width: 800px;
+  margin: 30px auto 60px auto;
   // border: 1px solid red;
   padding: 0 20px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -282,8 +282,8 @@ textarea {
 
 .profile-pic {
   grid-area: profile-pic;
-  padding: $left-column-padding;
-  padding-bottom: 0;
+  padding: $left-column-padding $left-column-padding 0 $left-column-padding;
+  // padding-bottom: 0;
   @media screen and (min-width: 600px) {
     background-color: $background-color-left-side;
   }
@@ -344,6 +344,7 @@ textarea {
     $left-column-padding;
   @media screen and (min-width: 600px) {
     background-color: $background-color-left-side;
+    padding-bottom: 40px;
   }
   // padding: 0 8px;
   // .expertise-header,
@@ -359,7 +360,10 @@ textarea {
   //   grid-row: 1;
   // }
   grid-area: name-function;
-  padding: $left-column-padding;
+  padding: $left-column-padding $left-column-padding 0 0;
+  @media screen and (min-width: 600px) {
+    padding: $left-column-padding $left-column-padding 0 $left-column-padding;
+  }
   // padding-top: 40px;
 }
 

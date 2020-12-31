@@ -7,7 +7,7 @@ const ProfilePictureEditMode = (props) => {
         {/* <form onSubmit={props.onSubmitFormHandleSubmit.bind(this)}> */}
         <form onSubmit={e => props.onSubmitFormHandleSubmit(e)}>
 
-          <div className="component-header-edit-mode">Add Your Picture</div>
+          <div className="component-header-edit-mode">Picture</div>
           {props.inputFields.map((inputField, index) => (
               <div key={index}>
                 {/* <label htmlFor={"profile-picture"+index}>Add Profile Picture</label> */}

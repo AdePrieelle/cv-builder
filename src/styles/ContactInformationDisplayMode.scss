@@ -1,3 +1,5 @@
+@import "./partials/variables";
+
 // .component-header-display-mode-contact {
 //   margin-bottom: 20px;
 //   display: flex;
@@ -14,7 +16,7 @@
     min-height: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: rgb(77, 77, 77);
+    background-color: $contact-option-bg-color;
     display: flex;
     justify-content: center;
     align-items: center;
