@@ -18,6 +18,22 @@ body {
   margin-top: 100px;
 }
 
+.print-button-container {
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // transform: translateY(-100%);
+  display: flex;
+  justify-content: end;
+  // justify-content: center;
+  // margin-top: 16px;
+  width: 80%;
+  max-width: 800px;
+  // margin-right: 10%;
+  margin: 0 auto;
+  // border: 1px solid red;
+}
+
 label {
   display: block;
   margin-bottom: 4px;
@@ -121,7 +137,7 @@ input {
 .components-wrapper {
   width: 80%;
   max-width: 800px;
-  margin: 30px auto 60px auto;
+  margin: 16px auto 60px auto;
   // border: 1px solid red;
   padding: 0 20px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -389,4 +405,149 @@ textarea {
   // @media screen and (min-width: 600px) {
   //   border-bottom: 0;
   // }
+}
+
+// To Print pdf from the cv
+// @media print {
+//   body > * {
+//     visibility: hidden;
+//   }
+//   .components-wrapper {
+//     visibility: visible;
+//   }
+//   .components-wrapper {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//   }
+// }
+
+// @page {
+//   size: A4;
+//   margin: 0;
+// }
+@media print {
+  @page {
+    // size: 330mm 427mm;
+    size: A4;
+    // size: 210mm 297mm;
+
+    // margin: 14mm;
+    margin: 0;
+  }
+  html,
+  body {
+    // width: 210mm;
+    // height: 297mm;
+
+    // height: 100%;
+    // width: 100%;
+  }
+  * {
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    // box-shadow: none;
+  }
+  body {
+    visibility: hidden;
+    background-color: white;
+    // box-shadow: none;
+  }
+  .components-wrapper {
+    visibility: visible;
+    // max-width: 210mm;
+    // max-height: 297mm;
+    // width: 210mm;
+    // height: 297mm;
+
+    // max-width: 100%;
+    // max-height: 100%;
+
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    // box-shadow: none;
+    // right: 0;
+    // bottom: 0;
+  }
+
+  .components-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    box-shadow: none;
+    grid-template-areas:
+      "profile-pic name-function name-function"
+      "contact profile-description profile-description"
+      "education professional-experience professional-experience"
+      "expertise professional-experience professional-experience";
+  }
+
+  .profile-pic {
+    grid-area: profile-pic;
+    padding: $left-column-padding $left-column-padding 0 $left-column-padding;
+    background-color: $background-color-left-side;
+  }
+
+  .contact {
+    grid-area: contact;
+    padding: $left-column-top-padding $left-column-padding 0
+      $left-column-padding;
+    background-color: $background-color-left-side;
+  }
+
+  .education {
+    grid-area: education;
+    padding: $left-column-top-padding $left-column-padding 0
+      $left-column-padding;
+    background-color: $background-color-left-side;
+  }
+
+  .expertise {
+    grid-area: expertise;
+    padding: 0 $left-column-padding;
+    padding: $left-column-top-padding $left-column-padding $left-column-padding
+      $left-column-padding;
+    background-color: $background-color-left-side;
+    padding-bottom: 40px;
+  }
+
+  .name-function {
+    grid-area: name-function;
+    padding: $left-column-padding $left-column-padding 0 $left-column-padding;
+  }
+
+  .profile-description {
+    grid-area: profile-description;
+    padding: $left-column-top-padding $left-column-padding 0
+      $left-column-padding;
+  }
+
+  .professional-experience {
+    grid-area: professional-experience;
+    padding: $left-column-top-padding $left-column-padding 0
+      $left-column-padding;
+  }
+
+  .props-value-name-title-inputname {
+    font-size: 32px;
+  }
+
+  .props-value-name-title-inputtitle {
+    font-size: 20px;
+  }
+
+  .component-header-edit-mode-left,
+  .component-header-display-mode-left {
+    justify-content: start;
+    padding: 0;
+    text-align: left;
+  }
+
+  /* ... the rest of the rules ... */
 }

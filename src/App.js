@@ -12,6 +12,7 @@ import ProfessionalExperience from "./components/ProfessionalExperience"
 import ProfilePicture from "./components/ProfilePicture"
 // import ToggleButton from "./components/ToggleButton"
 import ToggleButtonText from "./components/ToggleButtonText";
+import PrintCvButton from "./components/PrintCvButton";
 import './styles/App.scss';
 
 class App extends Component {
@@ -21,6 +22,10 @@ class App extends Component {
     this.handleCvEditModeClick = this.handleCvEditModeClick.bind(this);
     this.handleCvDisplayModeClick = this.handleCvDisplayModeClick.bind(this);
     this.changeToggleButtonState = this.changeToggleButtonState.bind(this);
+    // this.printElem = this.printElem.bind(this);
+    // this.printContents = this.printContents.bind(this);
+    // this.printContent = this.printContent.bind(this);
+    this.printCv = this.printCv.bind(this);
 
     this.state = {
       isInCvEditMode: true,
@@ -40,14 +45,62 @@ class App extends Component {
     this.setState({isInCvEditMode: !this.state.isInCvEditMode});
   }
 
-  render() {
-    let isInCvEditMode = this.state.isInCvEditMode;
-    let button;
-    if (isInCvEditMode) {
-      button = <button className="edit-preview-button" onClick={this.handleCvEditModeClick}>Preview Mode</button>
+  printCv() {
+    if(this.state.isInCvEditMode) {
+      this.setState({isInCvEditMode: false});
+      window.print();
+      this.setState({isInCvEditMode: true});
     } else {
-      button = <button className="edit-preview-button" onClick={this.handleCvDisplayModeClick}>Edit Mode</button>
+      window.print();
     }
+  }
+
+  // printElem() {
+  //     var mywindow = window.open('', 'PRINT', 'height=400,width=600');
+
+  //     mywindow.document.write('<html><head><title>' + document.title  + '</title>');
+  //     mywindow.document.write('</head><body >');
+  //     mywindow.document.write('<h1>' + document.title  + '</h1>');
+  //     mywindow.document.write(document.querySelector(".components-wrapper").innerHTML);
+  //     mywindow.document.write('</body></html>');
+
+  //     mywindow.document.close(); // necessary for IE >= 10
+  //     mywindow.focus(); // necessary for IE >= 10*/
+
+  //     mywindow.print();
+  //     mywindow.close();
+
+  //     return true;
+  // }
+
+  // printContents()
+  // {
+  //   var prtContent = document.querySelector(".components-wrapper");
+  //   var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+  //   WinPrint.document.write('<link href="./styles/App.scss" rel="stylesheet" media="screen,print">');
+  //   WinPrint.document.write(prtContent.innerHTML);
+  //   WinPrint.document.close();  
+  //   WinPrint.focus();
+  //   WinPrint.print();
+  //   WinPrint.close();
+  // }
+
+  // printContent() {
+  //   let restorepage = document.body.innerHTML;
+  //   let printcontent = document.querySelector(".components-wrapper").innerHTML;
+  //   document.body.innerHTML=printcontent;
+  //   window.print();
+  //   document.body.innerHTML=restorepage;
+  // }
+
+  render() {
+    // let isInCvEditMode = this.state.isInCvEditMode;
+    // let button;
+    // if (isInCvEditMode) {
+    //   button = <button className="edit-preview-button" onClick={this.handleCvEditModeClick}>Preview Mode</button>
+    // } else {
+    //   button = <button className="edit-preview-button" onClick={this.handleCvDisplayModeClick}>Edit Mode</button>
+    // }
 
     return (
       <div>
@@ -56,7 +109,19 @@ class App extends Component {
         <div className="toggle-button-text-container">
           <ToggleButtonText changeToggleButtonState={this.changeToggleButtonState}/>
         </div>
+        {/* <button onClick={this.printElem}>Print cv</button> */}
+        {/* <button onClick={() => window.print()}>Print</button> */}
+        <div className="print-button-container">
+          {/* <button onClick={this.printCv}>Print</button> */}
+          <PrintCvButton printCv={this.printCv} />
+        </div>
+
+        {/* <button onClick={this.printContents}>print</button> */}
+        {/* <button onClick={this.printContent}>Print Content</button> */}
         <div className="components-wrapper">
+          {/* <div className="print-button-container">
+            <PrintCvButton printCv={this.printCv} />
+          </div> */}
           {/* <GeneralInformation />
           <EducationalExperience />
           <WorkExperience /> */}

@@ -11,25 +11,25 @@ const ContactInformationDisplayMode = (props) => {
                 <div key={index}>
                   <div className="contact-option">
                     <div className="contact-icon-container">
-                      <i class="fas fa-phone-alt contact-icon"></i>
+                      <i className="fas fa-phone-alt contact-icon"></i>
                     </div>
                     <div className="props-value">{inputField.inputPhone}</div>
                   </div>
                   <div className="contact-option">
                     <div className="contact-icon-container">
-                      <i class="fas fa-envelope contact-icon"></i>
+                      <i className="fas fa-envelope contact-icon"></i>
                     </div>
                     <div className="props-value">{inputField.inputMail}</div>
                   </div>
                   <div className="contact-option">
                     <div className="contact-icon-container">
-                      <i class="fas fa-home contact-icon"></i>
+                      <i className="fas fa-home contact-icon"></i>
                     </div>
                     <div className="props-value">{inputField.inputLocation}</div>
                   </div>
                   <div className="contact-option">
                     <div className="contact-icon-container">
-                      <i class="fab fa-linkedin-in contact-icon"></i>
+                      <i className="fab fa-linkedin-in contact-icon"></i>
                     </div>
                     <div className="props-value">{inputField.inputLinkedIn}</div>
                   </div>
