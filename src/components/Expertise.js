@@ -60,40 +60,26 @@ class Expertise extends React.Component {
   };
           
   render() {
-    
     const isInEditMode = this.state.isInEditMode;
     let renderingMode;
     let button;
     // show edit mode only when the component and cv are in edit mode
     if (isInEditMode && this.props.isInCvEditMode) {
       renderingMode = <ExpertiseEditMode 
-      // onSubmitFormHandleSubmit={this.handleSubmit.bind(this)}
-      onSubmitFormHandleSubmit={this.handleSubmit}
-
-      inputFields={this.state.inputFields}
-      onChangeInput={this.handleChangeInput}
-      onClickHandleRemoveFields={this.handleRemoveFields}
-      onClickHandleAddFields={this.handleAddFields}
-      isInCvEditMode = {this.props.isInCvEditMode}
-
-
-      // onClickHandleSubmit={this.handleSubmit.bind(this)}
-      // onClickHandleSubmit={this.handleSubmit}
-
-    />
-      // if(this.props.isInCvEditMode) {
-        button = <SubmitButton onClick={this.handleEditModeClick} />
-      // }
+        onSubmitFormHandleSubmit={this.handleSubmit}
+        inputFields={this.state.inputFields}
+        onChangeInput={this.handleChangeInput}
+        onClickHandleRemoveFields={this.handleRemoveFields}
+        onClickHandleAddFields={this.handleAddFields}
+        isInCvEditMode = {this.props.isInCvEditMode}
+      />
+      button = <SubmitButton onClick={this.handleEditModeClick} />
     } else {
       renderingMode = <ExpertiseDisplayMode
         inputFields={this.state.inputFields}
-        // onClickHandleEdit={this.handleDisplayModeClick}
       />
-      // if(this.props.isInCvEditMode) {
-        button = <EditButton onClick={this.handleDisplayModeClick} />
-      // }
+      button = <EditButton onClick={this.handleDisplayModeClick} />
     }
-
 
     return (
       <div>

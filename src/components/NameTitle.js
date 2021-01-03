@@ -52,20 +52,16 @@ class NameTitle extends React.Component {
     // show edit mode only when the component and cv are in edit mode
     if (isInEditMode && this.props.isInCvEditMode) {
       renderingMode = <NameTitleEditMode 
-      onSubmitFormHandleSubmit={this.handleSubmit}
-      inputFields={this.state.inputFields}
-      onChangeInput={this.handleChangeInput}
-    />
-      // if(this.props.isInCvEditMode) {
-        button = <SubmitButton onClick={this.handleEditModeClick} />
-      // }
+        onSubmitFormHandleSubmit={this.handleSubmit}
+        inputFields={this.state.inputFields}
+        onChangeInput={this.handleChangeInput}
+      />
+      button = <SubmitButton onClick={this.handleEditModeClick} />
     } else {
       renderingMode = <NameTitleDisplayMode 
         inputFields={this.state.inputFields}
       />
-      // if(this.props.isInCvEditMode) {
-        button = <EditButton onClick={this.handleDisplayModeClick} />
-      // }
+      button = <EditButton onClick={this.handleDisplayModeClick} />
     }
 
     return (

@@ -36,20 +36,15 @@ class Education extends React.Component {
   }
 
   handleChangeInput = (index, e) => {
-    // console.log(index, event.target.name);
     const values = [...this.state.inputFields];
     values[index][e.target.name] = e.target.value;
     this.setState({
       values
     });
-    // console.log(index, e.target.name);
-    // console.log(this.state.inputFields);
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    // console.log("inputFields", this.state.inputFields);
-    // console.log("hi");
   };
 
   handleAddFields = () => {
@@ -66,40 +61,27 @@ class Education extends React.Component {
     });
   };
 
-  
   render() {
-    
-    // const isInCvEditMode = this.props.isInCvEditMode;
-
     const isInEditMode = this.state.isInEditMode;
     let renderingMode;
     let button;
     // show edit mode only when the component and cv are in edit mode
     if (isInEditMode && this.props.isInCvEditMode) {
       renderingMode = <EducationEditMode 
-      onSubmitFormHandleSubmit={this.handleSubmit}
-      inputFields={this.state.inputFields}
-      onChangeInput={this.handleChangeInput}
-      onClickHandleRemoveFields={this.handleRemoveFields}
-      onClickHandleAddFields={this.handleAddFields}
-      // isInCvEditMode = {this.props.isInCvEditMode}
-      isInCvEditMode = {this.props.isInCvEditMode}
-
-      // onClickHandleSubmit={this.handleSubmit}
-    />
-      // if(this.props.isInCvEditMode) {
-        button = <SubmitButton onClick={this.handleEditModeClick} />
-      // }
+        onSubmitFormHandleSubmit={this.handleSubmit}
+        inputFields={this.state.inputFields}
+        onChangeInput={this.handleChangeInput}
+        onClickHandleRemoveFields={this.handleRemoveFields}
+        onClickHandleAddFields={this.handleAddFields}
+        isInCvEditMode = {this.props.isInCvEditMode}
+      />
+      button = <SubmitButton onClick={this.handleEditModeClick} />
     } else {
       renderingMode = <EducationDisplayMode 
         inputFields={this.state.inputFields}
-        // onClickHandleEdit={this.handleDisplayModeClick}
       />
-      // if(this.props.isInCvEditMode) {
-        button = <EditButton onClick={this.handleDisplayModeClick} />
-      // }
+      button = <EditButton onClick={this.handleDisplayModeClick} />
     }
-
 
     return (
       <div>
