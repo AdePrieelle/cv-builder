@@ -21,9 +21,9 @@ body {
 .print-button-container {
   display: flex;
   justify-content: flex-end;
+  margin: 0 auto;
   width: 80%;
   max-width: 800px;
-  margin: 0 auto;
 }
 
 label {
@@ -33,15 +33,22 @@ label {
 
 input {
   margin-bottom: 12px;
+  width: 100%;
+}
+
+textarea {
+  padding: 10px;
+  width: 100%;
+  resize: none;
 }
 
 .component-header-edit-mode,
 .component-header-display-mode {
-  font-size: 1.2rem;
-  margin-bottom: 2.5rem;
-  margin-top: 0;
   display: flex;
   justify-content: center;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  font-size: 1.2rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -55,141 +62,24 @@ input {
   }
 }
 
+.component-item {
+  position: relative;
+}
+
 .component-input-wrapper {
   position: relative;
   margin-bottom: 40px;
 }
 
-.component-input-wrapper-education:last-of-type {
-  margin-bottom: 10px;
-}
-
-.component-input-wrapper-professionalexperience:last-of-type {
-  margin-bottom: 30px;
-}
-
-.component-input-wrapper-expertise {
-  position: relative;
-  margin-bottom: 10px;
-  input {
-    margin-top: 0px;
-    margin-bottom: 16px;
-  }
-}
-
-.component-item-professionalexperience {
-  @media screen and (min-width: 600px) {
-    margin-bottom: 40px;
-  }
-}
-
-.component-item {
-  position: relative;
-}
-
-.edit-preview-button {
-  margin-top: 100px;
-  display: block;
-  margin: 120px auto 0px auto;
-}
-
-.components-wrapper {
-  width: 80%;
-  max-width: 800px;
-  margin: 16px auto 60px auto;
-  padding: 0 20px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-  background-color: $components-wrapper-bg-color;
-}
-
 .component-divide-line {
-  height: 1px;
   margin-top: 30px;
   margin-bottom: 30px;
+  height: 1px;
   background-color: $divide-line-color;
-}
-
-input {
-  width: 100%;
-}
-
-textarea {
-  width: 100%;
-  resize: none;
-  padding: 10px;
-}
-
-.props-value-name-title {
-  width: 100%;
-  display: block;
-}
-
-.props-value-profile-description {
-  word-break: break-word;
-  font-weight: 400;
 }
 
 .props-value {
   word-break: break-word;
-}
-
-.component-props-education {
-  text-align: center;
-  .education-props-values {
-    > * {
-      margin-bottom: 10px;
-    }
-    .props-value-education-inputstudy {
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    .props-value-education-inputschool {
-      font-weight: 300;
-    }
-    .props-value-education-inputdatestudy {
-      font-weight: 300;
-    }
-  }
-  .education-props-values:not(:last-child) {
-    margin-bottom: 40px;
-  }
-}
-
-.props-value-inputexpertise {
-  text-align: center;
-  margin-bottom: 16px;
-  font-weight: 300;
-}
-
-.professionalexperience-props-values {
-  margin-bottom: 2.5rem;
-  .props-value-inputjobtitle {
-    margin-bottom: 8px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .company-location-date {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 16px;
-    font-weight: 300;
-    .props-value-inputcompany {
-      font-weight: 400;
-    }
-    .props-value-inputjoblocation {
-      font-size: 14px;
-    }
-    .props-value-inputjobdate {
-      font-size: 14px;
-    }
-    :not(:last-child) {
-      margin-bottom: 4px;
-    }
-  }
-  .props-value-inputJobDescription {
-    font-size: 16px;
-    font-weight: 400;
-  }
 }
 
 .components-wrapper {
@@ -212,6 +102,12 @@ textarea {
       "education professional-experience professional-experience"
       "expertise professional-experience professional-experience";
   }
+  margin: 16px auto 60px auto;
+  padding: 0 20px;
+  width: 80%;
+  max-width: 800px;
+  background-color: $components-wrapper-bg-color;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 .profile-pic {
@@ -302,13 +198,13 @@ textarea {
     // max-width: 100%;
     // max-height: 100%;
 
-    height: 100%;
-    width: 100%;
-    margin: 0;
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     bottom: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .components-wrapper {

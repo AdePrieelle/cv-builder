@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Header from "./components/Header"
-import NameTitle from "./components/NameTitle"
-import ProfileDescription from "./components/ProfileDescription"
-import Education from "./components/Education"
-import Expertise from "./components/Expertise"
-import ContactInformation from "./components/ContactInformation"
-import ProfessionalExperience from "./components/ProfessionalExperience"
-import ProfilePicture from "./components/ProfilePicture"
+import Header from "./components/Header";
+import NameTitle from "./components/NameTitle";
+import ProfileDescription from "./components/ProfileDescription";
+import Education from "./components/Education";
+import Expertise from "./components/Expertise";
+import ContactInformation from "./components/ContactInformation";
+import ProfessionalExperience from "./components/ProfessionalExperience";
+import ProfilePicture from "./components/ProfilePicture";
 import ToggleButtonText from "./components/ToggleButtonText";
 import PrintCvButton from "./components/PrintCvButton";
 import './styles/App.scss';

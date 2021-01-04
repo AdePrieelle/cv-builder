@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/ContactInformationDisplayMode.scss"
 
 const ContactInformationDisplayMode = (props) => {
   return (

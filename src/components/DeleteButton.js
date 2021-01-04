@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/DeleteButton.scss"
+import "../styles/DeleteButton.scss";
 
 const DeleteButton = (props) => {
   return (

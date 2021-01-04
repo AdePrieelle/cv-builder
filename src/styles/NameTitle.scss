@@ -1,7 +1,11 @@
+.component-edit-mode-nametitle {
+  margin-top: 10px;
+}
+
 .component-name-title {
   margin-top: 30px;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .props-value-name-title-inputname {
@@ -9,8 +13,8 @@
   @media screen and (min-width: 600px) {
     font-size: 32px;
   }
-  padding-top: 10px;
   margin-bottom: 20px;
+  padding-top: 10px;
   font-weight: 400;
 }
 

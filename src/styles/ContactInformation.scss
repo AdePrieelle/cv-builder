@@ -5,23 +5,23 @@
   align-items: center;
   margin-bottom: 10px;
   .contact-icon-container {
-    width: 30px;
-    min-width: 30px;
-    min-height: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: $contact-option-bg-color;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 14px;
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    min-height: 30px;
+    border-radius: 50%;
+    background-color: $contact-option-bg-color;
     .contact-icon {
       font-size: 1rem;
       color: white;
     }
   }
   .props-value {
-    word-break: break-word;
     font-weight: 300;
+    word-break: break-word;
   }
 }

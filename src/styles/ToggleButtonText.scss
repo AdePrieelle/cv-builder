@@ -1,13 +1,13 @@
 .toggle-button-text {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   .toggle-button-text-box {
-    width: 90px;
-    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 90px;
+    height: 40px;
   }
   .toggle-button-text-box-edit {
     justify-content: end;

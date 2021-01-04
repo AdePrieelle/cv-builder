@@ -1,9 +1,9 @@
 @import "./partials/variables";
 
 .delete-icon {
+  position: absolute;
+  top: -16px;
+  right: 0px;
   font-size: 18px;
   color: $delete-button-color;
-  position: absolute;
-  right: 0px;
-  top: -16px;
 }

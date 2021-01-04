@@ -1,0 +1,40 @@
+.component-item-professionalexperience {
+  @media screen and (min-width: 600px) {
+    margin-bottom: 40px;
+  }
+}
+
+.component-input-wrapper-professionalexperience:last-of-type {
+  margin-bottom: 30px;
+}
+
+.professionalexperience-props-values {
+  margin-bottom: 2.5rem;
+  .props-value-inputjobtitle {
+    margin-bottom: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .company-location-date {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    font-weight: 300;
+    .props-value-inputcompany {
+      font-weight: 400;
+    }
+    .props-value-inputjoblocation {
+      font-size: 14px;
+    }
+    .props-value-inputjobdate {
+      font-size: 14px;
+    }
+    :not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+  .props-value-inputJobDescription {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}

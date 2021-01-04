@@ -3,6 +3,7 @@ import ContactInformationEditMode from "./ContactInformationEditMode";
 import ContactInformationDisplayMode from "./ContactInformationDisplayMode";
 import EditButton from "./EditButton";
 import SubmitButton from "./SubmitButton";
+import "../styles/ContactInformation.scss";
 
 class ContactInformation extends React.Component {
   constructor(props) {

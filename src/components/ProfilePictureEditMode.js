@@ -2,7 +2,7 @@ import React from "react";
 
 const ProfilePictureEditMode = (props) => {
   return (
-    <div className="component">
+    <div className="component component-edit-mode-profilepicture">
       <form onSubmit={e => props.onSubmitFormHandleSubmit(e)}>
         <div className="component-header-edit-mode">Picture</div>
         {props.inputFields.map((inputField, index) => (

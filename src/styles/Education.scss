@@ -1,0 +1,25 @@
+.component-input-wrapper-education:last-of-type {
+  margin-bottom: 10px;
+}
+
+.component-props-education {
+  text-align: center;
+  .education-props-values {
+    > * {
+      margin-bottom: 10px;
+    }
+    .props-value-education-inputstudy {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .props-value-education-inputschool {
+      font-weight: 300;
+    }
+    .props-value-education-inputdatestudy {
+      font-weight: 300;
+    }
+  }
+  .education-props-values:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}

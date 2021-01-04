@@ -3,6 +3,7 @@ import ProfessionalExperienceEditMode from "./ProfessionalExperienceEditMode";
 import ProfessionalExperienceDisplayMode from "./ProfessionalExperienceDisplayMode";
 import EditButton from "./EditButton";
 import SubmitButton from "./SubmitButton";
+import "../styles/ProfessionalExperience.scss";
 
 class ProfessionalExperience extends React.Component {
   constructor(props) {

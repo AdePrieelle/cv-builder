@@ -3,6 +3,7 @@ import ExpertiseEditMode from "./ExpertiseEditMode";
 import ExpertiseDisplayMode from "./ExpertiseDisplayMode";
 import EditButton from "./EditButton";
 import SubmitButton from "./SubmitButton";
+import "../styles/Expertise.scss";
 
 class Expertise extends React.Component {
   constructor(props) {

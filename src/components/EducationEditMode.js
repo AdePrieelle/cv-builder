@@ -1,6 +1,6 @@
 import React from "react";
-import DeleteButton from "./DeleteButton"
-import AddButton from "./AddButton"
+import DeleteButton from "./DeleteButton";
+import AddButton from "./AddButton";
 
 const EducationEditMode = (props) => {
   return (

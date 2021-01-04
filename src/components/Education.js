@@ -3,6 +3,7 @@ import EducationEditMode from "./EducationEditMode";
 import EducationDisplayMode from "./EducationDisplayMode";
 import EditButton from "./EditButton";
 import SubmitButton from "./SubmitButton";
+import "../styles/Education.scss";
 
 class Education extends React.Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/EditButton.scss"
+import "../styles/EditButton.scss";
 
 const EditButton = (props) => {
   return (
