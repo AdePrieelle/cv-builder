@@ -7,6 +7,7 @@ const ProfilePictureDisplayMode = (props) => {
         {props.inputFields.map((inputField, index) => (
           <div key={index} className="img-profile-picture-container-wrapper">
             <div className="props-value img-profile-picture-container">
+              {/* set the background image to the uploaded image url */}
               <div className="img-profile-picture" style={{backgroundImage: `url(${inputField.inputProfilePicture})`}}></div>
             </div>
           </div>

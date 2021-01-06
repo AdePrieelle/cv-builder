@@ -19,6 +19,7 @@ class ProfilePicture extends React.Component {
       isInEditMode: true,
       inputFields: [
         {
+          // use a default profile picture
           inputProfilePicture: ExamplePicture,
         },
       ],
@@ -35,6 +36,7 @@ class ProfilePicture extends React.Component {
 
   handleChangeInput = (index, e) => {
     const values = [...this.state.inputFields];
+    // Change the inputFields object key value to the input value and create an url for the image file
     values[index][e.target.name] = URL.createObjectURL(e.target.files[0]);
     this.setState({
       values

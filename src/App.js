@@ -39,6 +39,7 @@ class App extends Component {
   }
 
   printCv() {
+    // Hiding the submit and edit buttons when printing
     if(this.state.isInCvEditMode) {
       this.setState({isInCvEditMode: false});
       window.print();

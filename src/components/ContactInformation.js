@@ -37,6 +37,7 @@ class ContactInformation extends React.Component {
 
   handleChangeInput = (index, e) => {
     const values = [...this.state.inputFields];
+    // Change the inputFields object key value to the input value
     values[index][e.target.name] = e.target.value;
     this.setState({
       values
