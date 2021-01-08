@@ -41,9 +41,48 @@ class App extends Component {
   printCv() {
     // Hiding the submit and edit buttons when printing
     if(this.state.isInCvEditMode) {
-      this.setState({isInCvEditMode: false});
-      window.print();
-      this.setState({isInCvEditMode: true});
+      // wait untill the page is in preview mode, print the cv and turn back to the original edit mode
+      const myPromise = new Promise((resolve, reject) => {
+        // switch to preview mode for printing
+        resolve(this.handleCvEditModeClick());
+      });
+      
+      myPromise.then(()=> {
+        // print the cv with print page settings
+        window.print();
+      }).then(() => {
+        // switch back to original edit mode after printing
+        this.handleCvDisplayModeClick();
+      })
+
+      // // async/await version
+      // let a = () => {
+      //   this.handleCvEditModeClick();
+      // }
+      // let b = () => {
+      //   this.handleCvDisplayModeClick();
+      // }
+      // async function setToPreviewMode() {
+      //   a();
+      // }
+      // async function printMeCv() {
+      //   await setToPreviewMode();
+      //   window.print();
+      // }
+      // async function SetToEditMode() {
+      //   await printMeCv();
+      //   b();
+      // }
+      // SetToEditMode();
+
+
+      // setTimeout version
+      // this.setState({isInCvEditMode: false});
+      // // window.print();
+      // setTimeout(function(){ window.print(); }, 200);
+      // // this.setState({isInCvEditMode: true});
+      // setTimeout(() => { this.setState({isInCvEditMode: true}); }, 300);
+  
     } else {
       window.print();
     }
