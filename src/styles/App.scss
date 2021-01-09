@@ -33,16 +33,22 @@ label {
   margin-bottom: 4px;
 }
 
-input {
-  margin-bottom: 12px;
+input[type="text"],
+textarea {
+  border: 1px solid #c1c6c8;
+  border-radius: 3px;
+  padding: 8px;
   width: 100%;
-  padding: 6px;
+}
+
+input {
+  margin-bottom: 16px;
+  width: 100%;
 }
 
 textarea {
-  padding: 6px;
-  width: 100%;
   resize: none;
+  height: 100px;
 }
 
 .component-header-edit-mode,
