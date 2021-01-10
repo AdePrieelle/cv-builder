@@ -3,7 +3,7 @@ import ProfilePictureEditMode from "./ProfilePictureEditMode";
 import ProfilePictureDisplayMode from "./ProfilePictureDisplayMode";
 import EditButton from "./EditButton";
 import SubmitButton from "./SubmitButton";
-import ExamplePicture from "../images/profile-pic-example.svg";
+import ExamplePicture from "../images/profile-pic-example.png";
 import "../styles/ProfilePicture.scss";
 
 class ProfilePicture extends React.Component {
