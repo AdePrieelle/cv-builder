@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: flex-end;
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   max-width: 800px;
 }
 
@@ -49,6 +49,10 @@ input {
 textarea {
   resize: none;
   height: 100px;
+}
+
+input[type="file"] {
+  min-width: 85px;
 }
 
 .component-header-edit-mode,
@@ -113,7 +117,7 @@ textarea {
   }
   margin: 16px auto 60px auto;
   padding: 0 20px;
-  width: 80%;
+  width: 90%;
   max-width: 800px;
   background-color: $components-wrapper-bg-color;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -149,8 +153,8 @@ textarea {
   padding: $left-column-top-padding $left-column-padding $left-column-padding
     $left-column-padding;
   @media screen and (min-width: 600px) {
-    background-color: $background-color-left-side;
     padding-bottom: 40px;
+    background-color: $background-color-left-side;
   }
 }
 
